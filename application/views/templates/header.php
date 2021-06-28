@@ -6,10 +6,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>Husthast - Portfolio Web</title>
+    <title>Husthast</title>
 
     <link rel="shortcut icon" type="image/x-icon" href="<?= base_url('')?>assets/images/lg.ico" />
-
+    <link rel="stylesheet" href="<?= base_url('')?>assets/font-awesome/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="<?= base_url('')?>assets/images/logohust.jpeg" type="image/jpeg" />
     <link rel="stylesheet" href="<?= base_url('')?>assets/css/bootstrap.css" />
     <link rel="stylesheet" href="<?= base_url('')?>assets/css/font-awesome.css" />
     <link rel="stylesheet" href="<?= base_url('')?>assets/css/flaticon.css" />
@@ -50,14 +51,15 @@
                                             </li>
                                           
                                             </li>
-                                            <li class="menu-item-has-children"><a href="#">Services</a>
+                                            <li class="menu-item-has-children <?php if($this->uri->segment(1) == 'service') { echo 'current-menu-item current-menu-ancestor'; } ?>"><a href="<?= base_url('portofolio')?>"><a href="#">Services</a>
                                                 <ul class="sub-menu">
-                                             
-                                        
-                                                    <li><a href="webdev">Web Development</a></li>
-                                                    <li><a href="digitalmarketing">Digital Marketing</a></li>
-                                                    <li><a href="smm">Social Media Management</a></li>
-                                                    <li><a href="erp">Enterprise Resource Planning</a></li>
+                                                    <li><a href="#">Advertising</a></li>
+                                                    <li><a href="#">Digital Marketing </a></li>
+                                                    <li><a href="#">Social Media Management </a></li>
+                                                    <li><a href="#">Event Organizer </a></li>
+                                                    <li><a href="#">Multimedia </a></li>
+                                                    <li><a href="#">Merchandising </a></li>
+                                                    <li><a href="#">Procurement</a></li>
                                                 </ul>
                                             </li>
                                             <!--
@@ -70,14 +72,14 @@
                                             </li>
 -->
                                             
-                                            <li class="<?= $active ?>"><a href="<?= base_url('portofolio')?>">Portfolio</a>
+                                            <li class="<?php if($this->uri->segment(1) == 'portofolio') { echo 'current-menu-item current-menu-ancestor'; } ?>"><a href="<?= base_url('portofolio')?>">Portfolio</a>
                                              
                                             </li>
-                                            <li class="r"><a href="<?= base_url('about')?>">About Us</a>
+                                            <li class="<?php if($this->uri->segment(1) == 'about') { echo 'current-menu-item current-menu-ancestor'; } ?>"><a href="<?= base_url('about')?>">About Us</a>
                                                
                                                </li>
                                            
-                                            <li class=""><a href="<?= base_url('contact')?>">Contacts Us</a>
+                                            <li class="<?php if($this->uri->segment(1) == 'contact') { echo 'current-menu-item current-menu-ancestor'; } ?>"><a href="<?= base_url('contact')?>">Contacts Us</a>
                                                
                                             </li>
                                         </ul>                               
