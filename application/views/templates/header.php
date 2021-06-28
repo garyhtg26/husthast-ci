@@ -7,13 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <title>Husthast</title>
-
-    <link rel="shortcut icon" type="image/x-icon" href="<?= base_url('')?>assets/images/lg.ico" />
     <link rel="stylesheet" href="<?= base_url('')?>assets/font-awesome/css/font-awesome.min.css">
     <link rel="shortcut icon" href="<?= base_url('')?>assets/images/logohust.jpeg" type="image/jpeg" />
+    <link rel="shortcut icon" type="image/x-icon" href="<?= base_url('')?>assets/images/lg.ico" />
     <link rel="stylesheet" href="<?= base_url('')?>assets/css/bootstrap.css" />
     <link rel="stylesheet" href="<?= base_url('')?>assets/css/font-awesome.css" />
-    <link rel="stylesheet" href="<?= base_url('')?>assets/css/flaticon.css" />
+    <link rel="stylesheet" type="text/css" href="<?= base_url('')?>assets/css/flaticon.css" />
     <link rel="stylesheet" href="<?= base_url('')?>assets/css/slick.css">
     <link rel="stylesheet" href="<?= base_url('')?>assets/css/slick-theme.css" />
     <link rel="stylesheet" href="<?= base_url('')?>assets/css/magnific-popup.css" />
@@ -34,7 +33,7 @@
                                 <!-- logo start -->
                                 <div class="octf-col">
                                     <div id="site-logo" class="site-logo">
-                                        <a href="">
+                                        <a href="<?= base_url('')?>">
                                             <img class="logo-static" src="<?= base_url('')?>assets/images/hust.png" alt="Onum">
                                             <img class="logo-scroll" src="<?= base_url('')?>assets/images/hust.png" alt="Onum">
                                         </a>
@@ -51,15 +50,15 @@
                                             </li>
                                           
                                             </li>
-                                            <li class="menu-item-has-children <?php if($this->uri->segment(1) == 'service') { echo 'current-menu-item current-menu-ancestor'; } ?>"><a href="<?= base_url('portofolio')?>"><a href="#">Services</a>
+                                            <li class="menu-item-has-children <?php if($this->uri->segment(1) == 'services') { echo 'current-menu-item current-menu-ancestor'; } ?>"><a href="<?= base_url('services')?>">Services<i class="fa fa-angle-down" aria-hidden="true" style="margin-left:1rem"></i></a>
                                                 <ul class="sub-menu">
-                                                    <li><a href="#">Advertising</a></li>
-                                                    <li><a href="#">Digital Marketing </a></li>
-                                                    <li><a href="#">Social Media Management </a></li>
-                                                    <li><a href="#">Event Organizer </a></li>
-                                                    <li><a href="#">Multimedia </a></li>
-                                                    <li><a href="#">Merchandising </a></li>
-                                                    <li><a href="#">Procurement</a></li>
+                                                    <li><a href="<?= base_url('services/advertising')?>">Advertising</a></li>
+                                                    <li><a href="<?= base_url('services/digitalmarketing')?>">Digital Marketing </a></li>
+                                                    <li><a href="<?= base_url('services/sosmed')?>">Social Media Management </a></li>
+                                                    <li><a href="<?= base_url('services/event')?>">Event Organizer </a></li>
+                                                    <li><a href="<?= base_url('services/multimedia')?>">Multimedia </a></li>
+                                                    <li><a href="<?= base_url('services/merchandising')?>">Merchandising </a></li>
+                                                    <li><a href="<?= base_url('services/procurment')?>">Procurement</a></li>
                                                 </ul>
                                             </li>
                                             <!--

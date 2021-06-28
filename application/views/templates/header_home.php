@@ -44,15 +44,15 @@
                                     <nav id="site-navigation" class="main-navigation">          
                                         <ul id="primary-menu" class="menu">
                                             <li class="current-menu-item current-menu-ancestor"><a href="<?= base_url('')?>" >Home</a></li>
-                                            <li class="menu-item-has-children"><a href="#">Service<i class="fa fa-angle-down" aria-hidden="true" style="margin-left:1rem"></i></a>
+                                            <li class="menu-item-has-children <?php if($this->uri->segment(1) === 'services') { echo 'current-menu-item current-menu-ancestor'; } ?>"><a href="<?= base_url('services')?>">Service<i class="fa fa-angle-down" aria-hidden="true" style="margin-left:1rem"></i></a>
                                                 <ul class="sub-menu">
-                                                    <li><a href="#">Advertising</a></li>
-                                                    <li><a href="#">Digital Marketing </a></li>
-                                                    <li><a href="#">Social Media Management </a></li>
-                                                    <li><a href="#">Event Organizer </a></li>
-                                                    <li><a href="#">Multimedia </a></li>
-                                                    <li><a href="#">Merchandising </a></li>
-                                                    <li><a href="#">Procurement</a></li>
+                                                    <li><a href="<?= base_url('services/advertising')?>">Advertising</a></li>
+                                                    <li><a href="<?= base_url('services/digitalmarketing')?>">Digital Marketing </a></li>
+                                                    <li><a href="<?= base_url('services/sosmed')?>">Social Media Management </a></li>
+                                                    <li><a href="<?= base_url('services/event')?>">Event Organizer </a></li>
+                                                    <li><a href="<?= base_url('services/multimedia')?>">Multimedia </a></li>
+                                                    <li><a href="<?= base_url('services/merchandising')?>">Merchandising </a></li>
+                                                    <li><a href="<?= base_url('services/procurment')?>">Procurement</a></li>
                                                 </ul>
                                             </li>
                                             <!--
@@ -64,9 +64,9 @@
                                                 </ul>
                                             </li>
                                             -->
-                                            <li class=""><a href="<?= base_url('Portofolio')?>">Portfolio</a></li>
-                                            <li class=""><a href="<?= base_url('About')?>">About Us</a></li>
-                                            <li class=""><a href="<?= base_url('Contact')?>">Contacts Us</a></li>
+                                            <li class="<?php if($this->uri->segment(1) === 'portofolio') { echo 'current-menu-item current-menu-ancestor'; } ?>"><a href="<?= base_url('portofolio')?>">Portfolio</a></li>
+                                            <li class="<?php if($this->uri->segment(1) === 'about') { echo 'current-menu-item current-menu-ancestor'; } ?>"><a href="<?= base_url('about')?>">About Us</a></li>
+                                            <li class="<?php if($this->uri->segment(1) === 'contact') { echo 'current-menu-item current-menu-ancestor'; } ?>"><a href="<?= base_url('contact')?>">Contacts Us</a></li>
                                         </ul>                               
                                     </nav><!-- #site-navigation -->
                                 </div>
